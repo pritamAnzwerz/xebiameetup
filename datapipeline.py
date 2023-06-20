@@ -23,7 +23,8 @@ def run():
             table='{}.{}'.format(dataset_name, table_name),
             dataset=dataset_name,
             project=project_id,
-            schema='AUTO_DETECT'
+            schema='AUTO_DETECT',
+            write_disposition=beam.io.BigQueryDisposition.WRITE_TRUNCATE
         )
 
 # Run the pipeline
